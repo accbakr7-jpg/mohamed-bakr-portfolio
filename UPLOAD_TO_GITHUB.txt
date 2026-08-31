@@ -1,0 +1,21 @@
+MOHAMED BAKR PORTFOLIO — FINAL GITHUB PAGES UPLOAD
+
+Repository:
+https://github.com/accbakr7-jpg/mohamed-bakr-portfolio
+
+Expected live site:
+https://accbakr7-jpg.github.io/mohamed-bakr-portfolio/
+
+UPLOAD THE CONTENTS OF THIS FOLDER TO THE REPOSITORY ROOT.
+
+You must see at least:
+- index.html
+- style.css
+- script.js
+- 404.html
+- robots.txt
+- sitemap.xml
+- .nojekyll
+- assets/  (folder with portrait, portfolio, logos, thumbnails, CV)
+
+Do not upload this ZIP file itself.
