@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://accbakr7-jpg.github.io/mohamed-bakr-portfolio/sitemap.xml
