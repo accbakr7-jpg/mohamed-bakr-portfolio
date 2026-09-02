@@ -118,6 +118,18 @@
     ]
   }
   </script>
+
+  <style>
+    @media (max-width: 820px){
+      #portfolio .project[style*="grid-column"] > a{
+        grid-template-columns:1fr !important;
+      }
+      #portfolio .project[style*="grid-column"] .project-media{
+        min-height:220px !important;
+      }
+    }
+  </style>
+
 </head>
 <body>
 <header class="navbar">
@@ -212,11 +224,12 @@
 <section id="portfolio" class="section-anchor section">
   <div class="container">
     <div class="portfolio-toolbar">
-      <div class="section-head" style="margin-bottom:0"><div class="eyebrow">Selected Portfolio</div><h2>Financial work you can actually inspect.</h2><p class="lead">Click any project to view the full dashboard.</p></div>
-      <div class="portfolio-note">All names, figures and client data are hypothetical / anonymized for confidentiality.</div>
+      <div class="section-head" style="margin-bottom:0"><div class="eyebrow">Selected Portfolio</div><h2>Financial case studies built around real management problems.</h2><p class="lead">Explore selected dashboards and case studies showing the problem, financial diagnosis, quantified scenarios and recommended actions.</p></div>
+      <div class="portfolio-note">Client and project identities are anonymized for confidentiality. Case-study figures are presented only to demonstrate the financial analysis and decision-making approach.</div>
     </div>
     <div class="portfolio-filters" aria-label="Portfolio filters">
       <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="liquidity">Liquidity</button>
       <button class="filter-btn" data-filter="reporting">Reporting</button>
       <button class="filter-btn" data-filter="projects">Projects</button>
       <button class="filter-btn" data-filter="workforce">Workforce</button>
@@ -224,6 +237,22 @@
       <button class="filter-btn" data-filter="financing">Financing</button>
     </div>
     <div class="portfolio-grid">
+      <article class="project" data-category="liquidity" style="grid-column:1 / -1;">
+        <a href="liquidity-rescue-case-study.html" style="text-decoration:none;color:inherit;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);background:inherit;border-radius:inherit;overflow:hidden;">
+          <div class="project-media" style="min-height:320px;">
+            <img loading="eager" decoding="async" src="assets/thumbs/liquidity-rescue.webp" alt="6-Month Liquidity Rescue and Scenario Planning Case Study" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="project-body" style="display:flex;flex-direction:column;justify-content:center;padding:32px;">
+            <div class="project-label">Featured Case Study · Liquidity Rescue</div>
+            <h3>6-Month Liquidity Rescue & Scenario Plan</h3>
+            <p>A cash-flow crisis was diagnosed across 12 anonymized projects, with monthly deductions reaching 27.4% and producing an estimated SAR 188,996 monthly cash deficit.</p>
+            <p><strong>Diagnosis:</strong> 97.2% of deductions were concentrated in only four projects, while pricing exposure added further pressure on liquidity.</p>
+            <p><strong>Solution:</strong> Three quantified recovery scenarios combining deduction reduction, cost savings, debt-service relief and payment prioritization.</p>
+            <p><strong>Modeled outcome:</strong> The realistic scenario turns monthly cash flow positive from month 3, while the stronger scenario reaches positive cash flow from month 2.</p>
+            <span class="btn btn-primary" style="align-self:flex-start;margin-top:10px;">View Full Case Study</span>
+          </div>
+        </a>
+      </article>
       <article class="project" data-category="workforce"><div class="project-media" data-full="assets/payroll-workforce.png" data-alt="Integrated Payroll and Workforce Management"><img loading="lazy" decoding="async" src="assets/thumbs/payroll-workforce.webp" alt="Integrated Payroll and Workforce Management"></div><div class="project-body"><div class="project-label">Payroll · Workforce</div><h3>Integrated Payroll & Workforce Management</h3><p>Payroll consolidation, attendance, advances, project allocation and controls.</p></div></article>
       <article class="project" data-category="workforce"><div class="project-media" data-full="assets/employee-cost.png" data-alt="Employee Cost and Workforce Analysis"><img loading="lazy" decoding="async" src="assets/thumbs/employee-cost.webp" alt="Employee Cost and Workforce Analysis"></div><div class="project-body"><div class="project-label">Costing · Workforce</div><h3>Employee Cost & Workforce Analysis</h3><p>Employee cost structure, Saudization mix, headcount and project allocation.</p></div></article>
       <article class="project" data-category="compliance"><div class="project-media" data-full="assets/local-content.png" data-alt="Local Content and Saudization Dashboard"><img loading="lazy" decoding="async" src="assets/thumbs/local-content.webp" alt="Local Content and Saudization Dashboard"></div><div class="project-body"><div class="project-label">Compliance · Local Content</div><h3>Local Content & Saudization Dashboard</h3><p>Local spend, Saudization, suppliers, compliance and improvement planning.</p></div></article>
