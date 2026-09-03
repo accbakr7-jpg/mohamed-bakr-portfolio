@@ -130,6 +130,166 @@
     }
   </style>
 
+
+  <style>
+    .portfolio-framework{
+      margin:18px 0 24px;
+      padding:16px 18px;
+      border:1px solid rgba(15,42,67,.12);
+      border-radius:14px;
+      background:#f7f9fb;
+      color:#52606d;
+      font-size:.92rem;
+    }
+    .portfolio-framework strong{color:#0b2a43}
+    .project-case{
+      display:flex;
+      flex-direction:column;
+      height:100%;
+    }
+    .project-case .project-body{display:flex;flex-direction:column;gap:10px;flex:1}
+    .project-id{
+      display:inline-flex;
+      width:max-content;
+      align-items:center;
+      gap:6px;
+      padding:5px 9px;
+      border-radius:999px;
+      background:#f4efe2;
+      color:#8a6211;
+      font-size:.74rem;
+      font-weight:800;
+      letter-spacing:.04em;
+    }
+    .case-structure{
+      display:grid;
+      gap:8px;
+      margin-top:4px;
+    }
+    .case-line{
+      padding:10px 11px;
+      border:1px solid rgba(15,42,67,.09);
+      border-radius:10px;
+      background:#fbfcfd;
+      font-size:.86rem;
+      line-height:1.45;
+      color:#52606d;
+    }
+    .case-line b{color:#0b2a43}
+    .case-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:7px;
+      margin-top:auto;
+      padding-top:4px;
+    }
+    .case-tags span{
+      border:1px solid rgba(15,42,67,.12);
+      border-radius:999px;
+      padding:5px 8px;
+      font-size:.72rem;
+      color:#5a6773;
+      background:#fff;
+    }
+    .featured-kpis{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:8px;
+    }
+    .featured-kpis span{
+      border-radius:999px;
+      padding:6px 9px;
+      background:#f7f9fb;
+      border:1px solid rgba(15,42,67,.1);
+      font-size:.76rem;
+      font-weight:700;
+      color:#34495a;
+    }
+    .project-case .project-media img{height:100%;object-fit:cover}
+    @media(max-width:820px){
+      #portfolio .project[style*="grid-column"] > a{grid-template-columns:1fr !important;}
+    }
+  </style>
+
+
+  <style>
+    /* Finance Portfolio Assistant Demo */
+    .ai-fab{
+      position:fixed;right:22px;bottom:88px;z-index:10020;
+      display:flex;align-items:center;gap:10px;
+      border:0;border-radius:999px;padding:12px 16px;
+      background:#061d35;color:#fff;cursor:pointer;
+      box-shadow:0 14px 34px rgba(6,29,53,.28);
+      font:inherit;font-weight:800;
+    }
+    .ai-fab .ai-spark{color:#f1c45b;font-size:18px}
+    .ai-panel{
+      position:fixed;right:22px;bottom:150px;z-index:10030;
+      width:min(410px,calc(100vw - 28px));height:min(610px,calc(100vh - 190px));
+      display:none;flex-direction:column;overflow:hidden;
+      background:#fff;border:1px solid rgba(6,29,53,.12);
+      border-radius:20px;box-shadow:0 24px 70px rgba(6,29,53,.25)
+    }
+    .ai-panel.open{display:flex}
+    .ai-head{
+      background:linear-gradient(135deg,#061d35,#0d3154);
+      color:#fff;padding:16px 17px;display:flex;align-items:center;justify-content:space-between;gap:12px
+    }
+    .ai-head-left{display:flex;gap:10px;align-items:center}
+    .ai-avatar{
+      width:38px;height:38px;border-radius:12px;background:#f1c45b;color:#061d35;
+      display:grid;place-items:center;font-weight:900
+    }
+    .ai-title{font-weight:900;line-height:1.2}
+    .ai-subtitle{font-size:12px;color:#cdd9e4;margin-top:2px}
+    .ai-close{border:0;background:transparent;color:#fff;font-size:25px;cursor:pointer;line-height:1}
+    .ai-body{
+      flex:1;overflow:auto;padding:15px;background:#f6f8fa;scroll-behavior:smooth
+    }
+    .ai-msg{
+      max-width:88%;padding:11px 12px;border-radius:14px;margin:0 0 10px;
+      font-size:14px;line-height:1.48;white-space:pre-line
+    }
+    .ai-msg.bot{background:#fff;border:1px solid #e1e7ec;color:#22313f;border-top-left-radius:5px}
+    .ai-msg.user{margin-left:auto;background:#0d3154;color:#fff;border-top-right-radius:5px}
+    .ai-msg a{font-weight:800;color:#8a6211}
+    .ai-starters{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0 13px}
+    .ai-chip{
+      border:1px solid #cad5de;background:#fff;color:#17324a;border-radius:999px;
+      padding:8px 10px;font-size:12px;font-weight:700;cursor:pointer
+    }
+    .ai-note{
+      font-size:11px;color:#73808c;margin:4px 2px 10px;
+      padding:8px 10px;border-radius:9px;background:#eef2f5
+    }
+    .ai-foot{padding:12px;border-top:1px solid #e2e8ed;background:#fff}
+    .ai-input-row{display:flex;gap:8px}
+    .ai-input{
+      flex:1;border:1px solid #cfd8df;border-radius:12px;padding:11px 12px;
+      font:inherit;outline:none
+    }
+    .ai-input:focus{border-color:#6b8296;box-shadow:0 0 0 3px rgba(13,49,84,.08)}
+    .ai-send{
+      border:0;border-radius:12px;background:#f1c45b;color:#061d35;
+      font-weight:900;padding:0 14px;cursor:pointer
+    }
+    .ai-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+    .ai-action{
+      text-decoration:none;border:1px solid #cfd8df;border-radius:9px;
+      padding:7px 9px;font-size:12px;font-weight:800;color:#17324a;background:#fff
+    }
+    .ai-demo-badge{
+      display:inline-block;margin-top:5px;padding:3px 7px;border-radius:999px;
+      background:rgba(241,196,91,.16);color:#f5cf70;font-size:10px;font-weight:800
+    }
+    @media(max-width:640px){
+      .ai-fab{right:14px;bottom:82px;padding:11px 13px}
+      .ai-fab .ai-label{display:none}
+      .ai-panel{right:14px;bottom:138px;height:calc(100vh - 160px)}
+    }
+  </style>
+
 </head>
 <body>
 <header class="navbar">
@@ -224,9 +384,18 @@
 <section id="portfolio" class="section-anchor section">
   <div class="container">
     <div class="portfolio-toolbar">
-      <div class="section-head" style="margin-bottom:0"><div class="eyebrow">Selected Portfolio</div><h2>Financial case studies built around real management problems.</h2><p class="lead">Explore selected dashboards and case studies showing the problem, financial diagnosis, quantified scenarios and recommended actions.</p></div>
-      <div class="portfolio-note">Client and project identities are anonymized for confidentiality. Case-study figures are presented only to demonstrate the financial analysis and decision-making approach.</div>
+      <div class="section-head" style="margin-bottom:0">
+        <div class="eyebrow">Professional Portfolio</div>
+        <h2>Case studies built around problems, numbers, actions and management value.</h2>
+        <p class="lead">Every project below is presented using the same professional logic: <strong>Challenge → Analysis → Action → Outcome / Decision Value</strong>.</p>
+      </div>
+      <div class="portfolio-note">Client, employee, supplier and project identities are anonymized. Verified figures are shown where available; no figures are invented where source data is not appropriate for public disclosure.</div>
     </div>
+
+    <div class="portfolio-framework">
+      <strong>How to read this portfolio:</strong> the three featured projects include full case-study pages with verified metrics and detailed methodology. Supporting projects use concise project briefs to show the business problem, analytical work, deliverable and management value.
+    </div>
+
     <div class="portfolio-filters" aria-label="Portfolio filters">
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="liquidity">Liquidity</button>
@@ -237,28 +406,33 @@
       <button class="filter-btn" data-filter="compliance">Compliance</button>
       <button class="filter-btn" data-filter="financing">Financing</button>
     </div>
+
     <div class="portfolio-grid">
+
+      <!-- FEATURED 1 -->
       <article class="project" data-category="liquidity" style="grid-column:1 / -1;">
-        <a href="liquidity-rescue-case-study.html" style="text-decoration:none;color:inherit;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);background:inherit;border-radius:inherit;overflow:hidden;">
+        <a href="liquidity-rescue-case-study.html" style="text-decoration:none;color:inherit;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);background:inherit;border-radius:inherit;overflow:hidden;">
           <div class="project-media" style="min-height:320px;">
             <img loading="eager" decoding="async" src="assets/thumbs/liquidity-rescue.webp" alt="6-Month Liquidity Rescue and Scenario Planning Case Study" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="project-body" style="display:flex;flex-direction:column;justify-content:center;padding:32px;">
-            <div class="project-label">Featured Case Study · Liquidity Rescue</div>
+            <div class="project-id">Project 1001 · Featured</div>
+            <div class="project-label">Liquidity · Turnaround · Scenario Modeling</div>
             <h3>6-Month Liquidity Rescue & Scenario Plan</h3>
-            <p>A cash-flow crisis was diagnosed across 12 anonymized projects, with monthly deductions reaching 27.4% and producing an estimated SAR 188,996 monthly cash deficit.</p>
-            <p><strong>Diagnosis:</strong> 97.2% of deductions were concentrated in only four projects, while pricing exposure added further pressure on liquidity.</p>
-            <p><strong>Solution:</strong> Three quantified recovery scenarios combining deduction reduction, cost savings, debt-service relief and payment prioritization.</p>
-            <p><strong>Modeled outcome:</strong> The realistic scenario turns monthly cash flow positive from month 3, while the stronger scenario reaches positive cash flow from month 2.</p>
+            <p><strong>Challenge:</strong> Monthly deductions reached 27.4%, creating an estimated SAR 188,996 monthly cash deficit across 12 anonymized projects.</p>
+            <p><strong>Analysis:</strong> 97.2% of deductions were traced to four projects; pricing exposure and debt-service pressure were modeled separately.</p>
+            <p><strong>Action:</strong> Built current, realistic and strong recovery scenarios combining deduction reduction, cost savings, debt-service relief and payment prioritization.</p>
+            <p><strong>Modeled outcome:</strong> Positive monthly cash flow from month 3 under the realistic plan and month 2 under the stronger plan.</p>
+            <div class="featured-kpis"><span>27.4% Current Deduction Rate</span><span>12.8% Break-even</span><span>3 Scenarios</span><span>12 Projects</span></div>
             <span class="btn btn-primary" style="align-self:flex-start;margin-top:10px;">View Full Case Study</span>
           </div>
         </a>
       </article>
-      <article class="project" data-category="workforce"><div class="project-media" data-full="assets/payroll-workforce.png" data-alt="Integrated Payroll and Workforce Management"><img loading="lazy" decoding="async" src="assets/thumbs/payroll-workforce.webp" alt="Integrated Payroll and Workforce Management"></div><div class="project-body"><div class="project-label">Payroll · Workforce</div><h3>Integrated Payroll & Workforce Management</h3><p>Payroll consolidation, attendance, advances, project allocation and controls.</p></div></article>
-      <article class="project" data-category="workforce"><div class="project-media" data-full="assets/employee-cost.png" data-alt="Employee Cost and Workforce Analysis"><img loading="lazy" decoding="async" src="assets/thumbs/employee-cost.webp" alt="Employee Cost and Workforce Analysis"></div><div class="project-body"><div class="project-label">Costing · Workforce</div><h3>Employee Cost & Workforce Analysis</h3><p>Employee cost structure, Saudization mix, headcount and project allocation.</p></div></article>
+
+      <!-- FEATURED 2 -->
       <article class="project" data-category="audit" style="grid-column:1 / -1;">
         <a href="audit-close-case-study.html" style="text-decoration:none;color:inherit;display:grid;grid-template-columns:minmax(0,.9fr) minmax(360px,1.1fr);background:inherit;border-radius:inherit;overflow:hidden;">
-          <div class="project-media" style="min-height:300px;background:linear-gradient(135deg,#071d35,#123b61);padding:28px;display:flex;align-items:center;">
+          <div class="project-media" style="min-height:310px;background:linear-gradient(135deg,#071d35,#123b61);padding:28px;display:flex;align-items:center;">
             <div style="width:100%;color:white;">
               <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#f2c65d;font-weight:800;">Project 3001 · Evidence-Backed Close</div>
               <div style="font-size:34px;font-weight:900;line-height:1.05;margin:10px 0 20px;">Year-End Close<br>& Audit Readiness</div>
@@ -271,27 +445,166 @@
             </div>
           </div>
           <div class="project-body" style="display:flex;flex-direction:column;justify-content:center;padding:32px;">
-            <div class="project-label">Featured Case Study · Financial Close · Audit</div>
+            <div class="project-label">Financial Close · Reconciliations · Audit Support</div>
             <h3>Year-End Financial Close, Reconciliations & Audit Evidence Pack</h3>
-            <p>Resolved year-end completeness and reconciliation issues across revenue, banks, payroll, VAT, loans, fixed assets, customer balances and statutory liabilities.</p>
-            <p><strong>Evidence:</strong> 535 indexed files, 14 bank-support files, 15 guarantee files, 18 asset files, 13 project contracts and 38 adjustment / clarification files.</p>
-            <p><strong>Outcome:</strong> Final balances supported a complete 2025 financial-statement package and independent audit process.</p>
+            <p><strong>Challenge:</strong> Year-end completeness, legacy-account issues and a large audit-document request required structured reconciliation and correction.</p>
+            <p><strong>Action:</strong> Resolved issues across accrued revenue, expenses, banks, payroll, VAT, loans, assets, customer balances and statutory liabilities.</p>
+            <p><strong>Evidence:</strong> 535 indexed files, including bank, guarantee, asset, revenue, payroll and adjustment support.</p>
+            <p><strong>Outcome:</strong> Reconciled schedules and supporting evidence fed into the finalized 2025 financial-statement and independent-audit process.</p>
             <span class="btn btn-primary" style="align-self:flex-start;margin-top:10px;">View Full Case Study</span>
           </div>
         </a>
       </article>
-      <article class="project" data-category="compliance">
-        <a href="local-content-case-study.html" style="text-decoration:none;color:inherit;display:block;height:100%;">
-          <div class="project-media"><img loading="lazy" decoding="async" src="assets/thumbs/local-content.webp" alt="Local Content Certification Readiness and Audit Evidence Pack"></div>
-          <div class="project-body"><div class="project-label">Project 2001 · Compliance · Audit Readiness</div><h3>Local Content Certification Readiness & Evidence Pack</h3><p>55.9% verified baseline · 166 payroll records · SAR 3.96m supplier-spend mapping · GOSI, depreciation, sampling and audit evidence control.</p><span style="display:inline-block;margin-top:10px;font-weight:800;color:#a06f00;">View Full Case Study →</span></div>
+
+      <!-- FEATURED 3 -->
+      <article class="project" data-category="compliance" style="grid-column:1 / -1;">
+        <a href="local-content-case-study.html" style="text-decoration:none;color:inherit;display:grid;grid-template-columns:minmax(0,.9fr) minmax(360px,1.1fr);background:inherit;border-radius:inherit;overflow:hidden;">
+          <div class="project-media" style="min-height:300px;">
+            <img loading="lazy" decoding="async" src="assets/thumbs/local-content.webp" alt="Local Content Certification Readiness and Audit Evidence Pack" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="project-body" style="display:flex;flex-direction:column;justify-content:center;padding:32px;">
+            <div class="project-id">Project 2001 · Featured</div>
+            <div class="project-label">Compliance · Local Content · Audit Readiness</div>
+            <h3>Local Content Certification Readiness & Evidence Pack</h3>
+            <p><strong>Challenge:</strong> Build a complete, reviewable evidence pack covering payroll, suppliers, GOSI, depreciation and financial-data mapping for local-content assessment.</p>
+            <p><strong>Analysis:</strong> Structured employee, supplier and asset data; reconciled financial amounts and mapped supporting evidence by requirement.</p>
+            <p><strong>Evidence:</strong> 55.9% verified baseline, 166 payroll records and SAR 3.96m supplier-spend mapping.</p>
+            <p><strong>Management value:</strong> Improved audit readiness, evidence traceability and visibility over the drivers of the local-content score.</p>
+            <div class="featured-kpis"><span>55.9% Verified Baseline</span><span>166 Payroll Records</span><span>SAR 3.96m Supplier Spend</span><span>12-Month GOSI Review</span></div>
+            <span class="btn btn-primary" style="align-self:flex-start;margin-top:10px;">View Full Case Study</span>
+          </div>
         </a>
       </article>
-      <article class="project" data-category="reporting"><div class="project-media" data-full="assets/executive-kpi.png" data-alt="Executive Financial KPI Dashboard"><img loading="lazy" decoding="async" src="assets/thumbs/executive-kpi.webp" alt="Executive Financial KPI Dashboard"></div><div class="project-body"><div class="project-label">Management Reporting</div><h3>Executive Financial KPI Dashboard</h3><p>Revenue, expenses, liquidity, receivables, working capital and variances.</p></div></article>
-      <article class="project" data-category="reporting"><div class="project-media" data-full="assets/receivables-cashflow.png" data-alt="Receivables Aging and Cash Flow Analysis"><img loading="lazy" decoding="async" src="assets/thumbs/receivables-cashflow.webp" alt="Receivables Aging and Cash Flow Analysis"></div><div class="project-body"><div class="project-label">Working Capital</div><h3>Receivables Aging & Cash Flow Analysis</h3><p>Aging buckets, collections, client concentration, cash flow and liquidity.</p></div></article>
-      <article class="project" data-category="projects"><div class="project-media" data-full="assets/project-profitability.png" data-alt="Project Profitability and Performance Analysis"><img loading="lazy" decoding="async" src="assets/thumbs/project-profitability.webp" alt="Project Profitability and Performance Analysis"></div><div class="project-body"><div class="project-label">Projects · Cost Control</div><h3>Project Profitability & Performance Analysis</h3><p>Revenue, costs, margins, completion progress and project variances.</p></div></article>
-      <article class="project" data-category="compliance"><div class="project-media" data-full="assets/petty-cash-vat.png" data-alt="Petty Cash Reconciliation and VAT Review"><img loading="lazy" decoding="async" src="assets/thumbs/petty-cash-vat.webp" alt="Petty Cash Reconciliation and VAT Review"></div><div class="project-body"><div class="project-label">Control · VAT</div><h3>Petty Cash Reconciliation & VAT Review</h3><p>Expense validation, tax separation, document review and control exceptions.</p></div></article>
-      <article class="project" data-category="projects"><div class="project-media" data-full="assets/bid-scenario.png" data-alt="Financial Bid Analysis and Scenario Modeling"><img loading="lazy" decoding="async" src="assets/thumbs/bid-scenario.webp" alt="Financial Bid Analysis and Scenario Modeling"></div><div class="project-body"><div class="project-label">Modeling · Bids</div><h3>Financial Bid Analysis & Scenario Modeling</h3><p>Pricing, margin scenarios, sensitivity analysis and competitive bid support.</p></div></article>
-      <article class="project" data-category="financing"><div class="project-media" data-full="assets/corporate-financing.png" data-alt="Corporate Financing and Credit Decision Dashboard"><img loading="lazy" decoding="async" src="assets/thumbs/corporate-financing.webp" alt="Corporate Financing and Credit Decision Dashboard"></div><div class="project-body"><div class="project-label">Financing · Credit</div><h3>Corporate Financing & Credit Decision Dashboard</h3><p>Funding need, DSCR, debt facilities, receivables risk and credit strength.</p></div></article>
+
+      <!-- SUPPORTING PROJECTS -->
+      <article class="project project-case" data-category="workforce">
+        <div class="project-media" data-full="assets/payroll-workforce.png" data-alt="Integrated Payroll and Workforce Management"><img loading="lazy" decoding="async" src="assets/thumbs/payroll-workforce.webp" alt="Integrated Payroll and Workforce Management"></div>
+        <div class="project-body">
+          <div class="project-id">Project 4001</div>
+          <div class="project-label">Payroll · Workforce · Controls</div>
+          <h3>Integrated Payroll & Workforce Management</h3>
+          <div class="case-structure">
+            <div class="case-line"><b>Challenge:</b> Payroll data was spread across attendance, advances, deductions and project-allocation inputs, increasing control and reconciliation risk.</div>
+            <div class="case-line"><b>Analysis / Action:</b> Consolidated employee master data, payroll variables and project allocation into a controlled monthly workflow with validation checks.</div>
+            <div class="case-line"><b>Deliverable:</b> Payroll-control workbook linking gross-to-net pay, attendance, advances, deductions and project labor allocation.</div>
+            <div class="case-line"><b>Decision Value:</b> Cleaner payroll closing, stronger audit trail and more reliable labor-cost allocation by project.</div>
+          </div>
+          <div class="case-tags"><span>Payroll Control</span><span>Project Allocation</span><span>Reconciliation</span><span>Audit Trail</span></div>
+        </div>
+      </article>
+
+      <article class="project project-case" data-category="workforce">
+        <div class="project-media" data-full="assets/employee-cost.png" data-alt="Employee Cost and Workforce Analysis"><img loading="lazy" decoding="async" src="assets/thumbs/employee-cost.webp" alt="Employee Cost and Workforce Analysis"></div>
+        <div class="project-body">
+          <div class="project-id">Project 4002</div>
+          <div class="project-label">Costing · Workforce · Saudization</div>
+          <h3>Employee Cost & Workforce Analysis</h3>
+          <div class="case-structure">
+            <div class="case-line"><b>Challenge:</b> Management needed visibility beyond basic salary to understand the full workforce-cost structure and staffing mix.</div>
+            <div class="case-line"><b>Analysis / Action:</b> Analyzed salary, employer obligations, benefits, overtime, headcount, Saudization mix and project allocation.</div>
+            <div class="case-line"><b>Deliverable:</b> Workforce-cost dashboard and employee-level cost structure for planning, pricing and project review.</div>
+            <div class="case-line"><b>Decision Value:</b> Supports staffing decisions, tender costing and identification of labor-heavy projects or roles.</div>
+          </div>
+          <div class="case-tags"><span>Fully Loaded Cost</span><span>Saudization</span><span>Headcount</span><span>Project Costing</span></div>
+        </div>
+      </article>
+
+      <article class="project project-case" data-category="reporting">
+        <div class="project-media" data-full="assets/executive-kpi.png" data-alt="Executive Financial KPI Dashboard"><img loading="lazy" decoding="async" src="assets/thumbs/executive-kpi.webp" alt="Executive Financial KPI Dashboard"></div>
+        <div class="project-body">
+          <div class="project-id">Project 4003</div>
+          <div class="project-label">Management Reporting · KPI</div>
+          <h3>Executive Financial KPI Dashboard</h3>
+          <div class="case-structure">
+            <div class="case-line"><b>Challenge:</b> Financial data existed in separate reports but lacked one management view connecting profitability, liquidity and working capital.</div>
+            <div class="case-line"><b>Analysis / Action:</b> Structured revenue, expense, margin, receivables, cash, working-capital and variance indicators into an executive KPI model.</div>
+            <div class="case-line"><b>Deliverable:</b> Management dashboard with trend views, variances and financial warning indicators.</div>
+            <div class="case-line"><b>Decision Value:</b> Faster executive review and earlier identification of pressure on margin, cash or collections.</div>
+          </div>
+          <div class="case-tags"><span>Management Reporting</span><span>KPIs</span><span>Working Capital</span><span>Variance Analysis</span></div>
+        </div>
+      </article>
+
+      <article class="project project-case" data-category="reporting">
+        <div class="project-media" data-full="assets/receivables-cashflow.png" data-alt="Receivables Aging and Cash Flow Analysis"><img loading="lazy" decoding="async" src="assets/thumbs/receivables-cashflow.webp" alt="Receivables Aging and Cash Flow Analysis"></div>
+        <div class="project-body">
+          <div class="project-id">Project 4004</div>
+          <div class="project-label">Working Capital · Receivables</div>
+          <h3>Receivables Aging & Cash Flow Analysis</h3>
+          <div class="case-structure">
+            <div class="case-line"><b>Challenge:</b> Delayed collections can hide inside a total receivables balance and create liquidity pressure without a clear priority list.</div>
+            <div class="case-line"><b>Analysis / Action:</b> Segmented aging buckets, customer concentration, overdue exposure, collection status and expected cash timing.</div>
+            <div class="case-line"><b>Deliverable:</b> Aging and cash-conversion dashboard with collection priorities and customer-level visibility.</div>
+            <div class="case-line"><b>Decision Value:</b> Helps management focus collection effort where it has the highest liquidity impact.</div>
+          </div>
+          <div class="case-tags"><span>AR Aging</span><span>Collections</span><span>Cash Forecast</span><span>Customer Risk</span></div>
+        </div>
+      </article>
+
+      <article class="project project-case" data-category="projects">
+        <div class="project-media" data-full="assets/project-profitability.png" data-alt="Project Profitability and Performance Analysis"><img loading="lazy" decoding="async" src="assets/thumbs/project-profitability.webp" alt="Project Profitability and Performance Analysis"></div>
+        <div class="project-body">
+          <div class="project-id">Project 4005</div>
+          <div class="project-label">Projects · Profitability · Cost Control</div>
+          <h3>Project Profitability & Performance Analysis</h3>
+          <div class="case-structure">
+            <div class="case-line"><b>Challenge:</b> Company-level results can hide individual projects with weak margins, cost overruns or timing mismatches.</div>
+            <div class="case-line"><b>Analysis / Action:</b> Connected project revenue, direct cost, labor, materials, progress and variance information at project level.</div>
+            <div class="case-line"><b>Deliverable:</b> Project P&amp;L and performance dashboard comparing actual performance, margin and progress.</div>
+            <div class="case-line"><b>Decision Value:</b> Identifies loss-making or underperforming projects early and supports corrective action or repricing.</div>
+          </div>
+          <div class="case-tags"><span>Project P&amp;L</span><span>Margin</span><span>Cost Control</span><span>Variance</span></div>
+        </div>
+      </article>
+
+      <article class="project project-case" data-category="compliance">
+        <div class="project-media" data-full="assets/petty-cash-vat.png" data-alt="Petty Cash Reconciliation and VAT Review"><img loading="lazy" decoding="async" src="assets/thumbs/petty-cash-vat.webp" alt="Petty Cash Reconciliation and VAT Review"></div>
+        <div class="project-body">
+          <div class="project-id">Project 4006</div>
+          <div class="project-label">Internal Control · VAT · Reconciliation</div>
+          <h3>Petty Cash Reconciliation & VAT Review</h3>
+          <div class="case-structure">
+            <div class="case-line"><b>Challenge:</b> High-volume petty-cash activity creates risks around missing documents, incorrect expense coding and VAT treatment.</div>
+            <div class="case-line"><b>Analysis / Action:</b> Matched vouchers to supporting documents, separated VAT, reviewed eligibility and flagged exceptions or unreconciled items.</div>
+            <div class="case-line"><b>Deliverable:</b> Reconciled petty-cash schedule plus VAT and documentation exception register.</div>
+            <div class="case-line"><b>Decision Value:</b> Stronger expense control, cleaner VAT reporting and better recovery of eligible input tax.</div>
+          </div>
+          <div class="case-tags"><span>VAT</span><span>Petty Cash</span><span>Exception Review</span><span>Internal Control</span></div>
+        </div>
+      </article>
+
+      <article class="project project-case" data-category="projects">
+        <div class="project-media" data-full="assets/bid-scenario.png" data-alt="Financial Bid Analysis and Scenario Modeling"><img loading="lazy" decoding="async" src="assets/thumbs/bid-scenario.webp" alt="Financial Bid Analysis and Scenario Modeling"></div>
+        <div class="project-body">
+          <div class="project-id">Project 4007</div>
+          <div class="project-label">Tendering · Pricing · Scenario Modeling</div>
+          <h3>Financial Bid Analysis & Scenario Modeling</h3>
+          <div class="case-structure">
+            <div class="case-line"><b>Challenge:</b> Tender pricing must balance competitiveness with labor, operating, equipment, tax and margin requirements.</div>
+            <div class="case-line"><b>Analysis / Action:</b> Built multi-period cost and pricing scenarios with margin and sensitivity testing.</div>
+            <div class="case-line"><b>Deliverable:</b> Bid-pricing model showing cost structure, proposed price, profitability and scenario sensitivity.</div>
+            <div class="case-line"><b>Decision Value:</b> Supports a defensible bid price and highlights the commercial effect of cost or margin changes before submission.</div>
+          </div>
+          <div class="case-tags"><span>Bid Pricing</span><span>Sensitivity</span><span>Margin</span><span>Scenario Modeling</span></div>
+        </div>
+      </article>
+
+      <article class="project project-case" data-category="financing">
+        <div class="project-media" data-full="assets/corporate-financing.png" data-alt="Corporate Financing and Credit Decision Dashboard"><img loading="lazy" decoding="async" src="assets/thumbs/corporate-financing.webp" alt="Corporate Financing and Credit Decision Dashboard"></div>
+        <div class="project-body">
+          <div class="project-id">Project 4008</div>
+          <div class="project-label">Financing · Credit · Liquidity</div>
+          <h3>Corporate Financing & Credit Decision Dashboard</h3>
+          <div class="case-structure">
+            <div class="case-line"><b>Challenge:</b> Funding decisions require one view of debt facilities, repayment capacity, receivables risk and cash requirements.</div>
+            <div class="case-line"><b>Analysis / Action:</b> Combined funding need, loan schedules, debt service, receivables and cash-flow indicators into a credit-support model.</div>
+            <div class="case-line"><b>Deliverable:</b> Lender-ready financing dashboard and supporting schedules for credit review.</div>
+            <div class="case-line"><b>Decision Value:</b> Improves financing discussions and helps management evaluate affordability and debt-service pressure before taking new facilities.</div>
+          </div>
+          <div class="case-tags"><span>Financing</span><span>Debt Service</span><span>Credit</span><span>Cash Flow</span></div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -382,6 +695,55 @@
   <div class="modal-card"><button id="modalClose" class="modal-close" aria-label="Close portfolio preview">×</button><img id="modalImg" alt=""></div>
 </div>
 
+
+<!-- Finance Portfolio Assistant Demo -->
+<button id="aiFab" class="ai-fab" type="button" aria-controls="aiPanel" aria-expanded="false">
+  <span class="ai-spark">✦</span><span class="ai-label">Ask about my experience</span>
+</button>
+
+<section id="aiPanel" class="ai-panel" aria-label="Mohamed Bakr Finance Portfolio Assistant" aria-hidden="true">
+  <div class="ai-head">
+    <div class="ai-head-left">
+      <div class="ai-avatar">MB</div>
+      <div>
+        <div class="ai-title">Mohamed Bakr — Finance Assistant</div>
+        <div class="ai-subtitle">Experience · Case Studies · Part-Time Services</div>
+        <span class="ai-demo-badge">DEMO — Live AI not connected yet</span>
+      </div>
+    </div>
+    <button id="aiClose" class="ai-close" type="button" aria-label="Close assistant">×</button>
+  </div>
+
+  <div id="aiBody" class="ai-body">
+    <div class="ai-msg bot">Hello 👋
+I can help you explore Mohamed Bakr's finance experience, case studies and professional services.
+
+Try one of the questions below.</div>
+
+    <div class="ai-starters">
+      <button class="ai-chip" data-q="Why hire Mohamed?">Why hire Mohamed?</button>
+      <button class="ai-chip" data-q="Show financial case studies">Show financial case studies</button>
+      <button class="ai-chip" data-q="Audit & IFRS experience">Audit & IFRS experience</button>
+      <button class="ai-chip" data-q="Part-time services">Part-time services</button>
+    </div>
+
+    <div class="ai-note">This is a front-end demo. It uses pre-written portfolio answers only. No API key or private company files are embedded in the website.</div>
+  </div>
+
+  <div class="ai-foot">
+    <div class="ai-input-row">
+      <input id="aiInput" class="ai-input" type="text" placeholder="Ask about experience or projects..." autocomplete="off">
+      <button id="aiSend" class="ai-send" type="button">Send</button>
+    </div>
+    <div class="ai-actions">
+      <a class="ai-action" href="assets/Mohamed_Bakr_Executive_Finance_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+      <a class="ai-action" href="#contact">Contact Mohamed</a>
+      <a class="ai-action" href="https://wa.me/966570943940?text=Hello%20Mohamed%2C%20I%20visited%20your%20finance%20portfolio%20and%20would%20like%20to%20discuss%20a%20professional%20opportunity." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+
 <a href="https://wa.me/966570943940?text=Hello%20Mohamed%2C%20I%20visited%20your%20finance%20portfolio%20and%20would%20like%20to%20discuss%20a%20professional%20opportunity." target="_blank" rel="noopener"
    aria-label="Contact Mohamed Bakr on WhatsApp"
    title="WhatsApp"
@@ -391,6 +753,138 @@
     <path d="M16.03 4.8c-6.18 0-11.2 4.91-11.2 10.96 0 1.93.51 3.81 1.49 5.47L4.73 27.2l6.18-1.58a11.4 11.4 0 0 0 5.12 1.2h.01c6.17 0 11.2-4.91 11.2-10.96 0-2.93-1.17-5.68-3.29-7.75A11.28 11.28 0 0 0 16.03 4.8zm0 20.17h-.01a9.5 9.5 0 0 1-4.84-1.32l-.35-.2-3.67.94.98-3.51-.23-.36a9 9 0 0 1-1.42-4.76c0-5.03 4.28-9.12 9.55-9.12 2.55 0 4.95.97 6.75 2.73a8.96 8.96 0 0 1 2.8 6.49c0 5.03-4.29 9.11-9.56 9.11z"/>
   </svg>
 </a>
+
+
+<script>
+(function(){
+  const fab = document.getElementById('aiFab');
+  const panel = document.getElementById('aiPanel');
+  const closeBtn = document.getElementById('aiClose');
+  const body = document.getElementById('aiBody');
+  const input = document.getElementById('aiInput');
+  const send = document.getElementById('aiSend');
+
+  if(!fab || !panel || !body || !input || !send) return;
+
+  const answers = [
+    {
+      keys:['why hire','why should','hire mohamed','محمد'],
+      text:`Mohamed is a Chief Accountant with 15+ years of experience across financial reporting, IFRS, liquidity, project accounting, VAT/ZATCA, internal control and audit readiness.
+
+What makes the profile stronger is the evidence-based portfolio: liquidity rescue modeling, year-end close and audit support, local-content compliance, project profitability, receivables, payroll controls and financing analysis.
+
+For senior finance roles, the value proposition is: accounting control + management reporting + project-finance understanding + hands-on execution.`
+    },
+    {
+      keys:['case studies','case study','projects','portfolio','financial case'],
+      text:`The three featured case studies are:
+
+• Project 1001 — 6-Month Liquidity Rescue & Scenario Plan
+• Project 3001 — Year-End Financial Close, Reconciliations & Audit Evidence Pack
+• Project 2001 — Local Content Certification Readiness & Evidence Pack
+
+Supporting projects also cover payroll, employee cost, executive KPIs, receivables, project profitability, VAT controls, tender pricing and corporate financing.
+
+You can open the Portfolio section to inspect them.`
+    },
+    {
+      keys:['audit','ifrs','close','financial statements','year end'],
+      text:`Mohamed's audit-readiness work is demonstrated in Project 3001.
+
+The project covers year-end close, reconciliations and support across accrued revenue, expenses, banks, payroll, VAT, loans, fixed assets, customer balances and statutory liabilities.
+
+The evidence archive included 535 indexed files, and the work supported the finalized 2025 financial-statement and independent-audit process.
+
+Professional boundary: Mohamed handled accounting close, corrections, reconciliations and audit support; the independent auditor is responsible for the statutory audit opinion.`
+    },
+    {
+      keys:['liquidity','cash flow','cashflow','cash','rescue'],
+      text:`Project 1001 demonstrates Mohamed's liquidity and decision-support capability.
+
+The analysis identified a 27.4% deduction rate and an estimated SAR 188,996 monthly cash deficit across 12 anonymized projects. It also found that 97.2% of deductions were concentrated in four projects.
+
+Three recovery scenarios were modeled, combining deduction reduction, cost savings, debt-service relief and payment prioritization.`
+    },
+    {
+      keys:['local content','saudization','compliance','محتوى','المحتوى'],
+      text:`Project 2001 focuses on Local Content certification readiness and audit evidence.
+
+The case study presents a verified 55.9% baseline, 166 payroll records, supplier-spend mapping of about SAR 3.96m, 12-month GOSI review and structured evidence preparation.
+
+The value is not only compliance — it demonstrates data reconciliation, document control, audit readiness and management visibility.`
+    },
+    {
+      keys:['part-time','part time','freelance','advisory','services','remote'],
+      text:`Mohamed is currently working as a Chief Accountant and is open to selected part-time, remote, project-based and finance-advisory assignments.
+
+Suitable assignments include:
+• Month-end / year-end closing
+• Cash-flow and liquidity analysis
+• Project profitability and cost control
+• AR aging and collections
+• VAT/ZATCA reconciliations
+• Audit readiness and supporting schedules
+• Management dashboards and financial models
+
+Use Contact Mohamed or WhatsApp below to discuss scope and availability.`
+    },
+    {
+      keys:['engineering','consulting','project accounting','projects accounting','استشارات','هندسية'],
+      text:`Mohamed has direct exposure to project-based accounting and previously worked in an engineering consulting office.
+
+Relevant capabilities include project billing, receivables, revenue matching, project cost analysis, cash-flow visibility, accrued revenue, audit support and management reporting — all highly relevant to engineering and consulting environments.`
+    }
+  ];
+
+  function openPanel(){
+    panel.classList.add('open');
+    panel.setAttribute('aria-hidden','false');
+    fab.setAttribute('aria-expanded','true');
+    setTimeout(()=>input.focus(),100);
+  }
+  function closePanel(){
+    panel.classList.remove('open');
+    panel.setAttribute('aria-hidden','true');
+    fab.setAttribute('aria-expanded','false');
+  }
+  function addMsg(text, who){
+    const div = document.createElement('div');
+    div.className = 'ai-msg ' + who;
+    div.textContent = text;
+    body.appendChild(div);
+    body.scrollTop = body.scrollHeight;
+  }
+  function getAnswer(q){
+    const s = q.toLowerCase();
+    let best = null, score = 0;
+    for(const item of answers){
+      let local = 0;
+      for(const k of item.keys) if(s.includes(k.toLowerCase())) local++;
+      if(local > score){ score = local; best = item; }
+    }
+    if(best) return best.text;
+    return `This demo currently answers questions about Mohamed's experience, case studies, audit/IFRS work, liquidity, local content and part-time services.
+
+For a live version, the next step is to connect this interface securely to the OpenAI API and a curated portfolio knowledge base.`;
+  }
+  function submit(q){
+    const text = (q || input.value).trim();
+    if(!text) return;
+    addMsg(text,'user');
+    input.value='';
+    setTimeout(()=>addMsg(getAnswer(text),'bot'),180);
+  }
+
+  fab.addEventListener('click', openPanel);
+  closeBtn.addEventListener('click', closePanel);
+  send.addEventListener('click', ()=>submit());
+  input.addEventListener('keydown', e=>{ if(e.key==='Enter') submit(); });
+  document.querySelectorAll('.ai-chip').forEach(btn=>{
+    btn.addEventListener('click', ()=>submit(btn.getAttribute('data-q')));
+  });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') closePanel(); });
+})();
+</script>
 
 <script src="script.js"></script>
 </body>
